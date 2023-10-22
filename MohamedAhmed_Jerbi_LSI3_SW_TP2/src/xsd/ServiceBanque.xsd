@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://www.example.org/ServiceBanque"
+	xmlns:tns="http://www.example.org/ServiceBanque"
+	elementFormDefault="qualified">
+	<element name="BanqueService">
+	
+		<complexType>
+			<sequence>
+				<element name="conversion">
+					<complexType>
+						<sequence>
+							<element name="montant" type="double"></element>
+						</sequence>
+					</complexType>
+				</element>
+				<element name="getComptes" minOccurs="1" maxOccurs="unbounded">
+					<complexType>
+						<sequence>
+							<element name="solde" type="double"></element>
+							<element name="code" type="integer"></element>
+							<element name="dataCreation" type="date"></element>
+						</sequence>
+					</complexType>
+				</element>
+				<element name="getCompte" >
+					<complexType>
+						<sequence>
+							<element name="solde" type="double"></element>
+							<element name="code" type="integer"></element>
+							<element name="dataCreation" type="date"></element>
+						</sequence>
+					</complexType>
+				</element>
+			</sequence>
+		</complexType>
+
+	</element>
+
+</schema>

@@ -1,0 +1,731 @@
+!SESSION 2023-10-19 11:20:46.951 -----------------------------------------------
+eclipse.buildId=4.29.0.20230907-1200
+java.version=17.0.8.1
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=fr_FR
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY ch.qos.logback.classic 1 0 2023-10-19 11:21:11.618
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY ch.qos.logback.classic 1 0 2023-10-19 11:21:28.345
+!MESSAGE Logback config file: C:\Users\asus\Desktop\lsi3\SOA\.metadata\.plugins\org.eclipse.m2e.logback\logback.2.2.0.20230625-0847.xml
+
+!ENTRY org.eclipse.jface 2 0 2023-10-19 11:21:35.955
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2023-10-19 11:21:35.955
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.jdt.ui.navigate.open.type"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.lsp4e.symbolinworkspace"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2023-10-19 11:21:41.817
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\asus'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2023-10-19 11:30:48.626
+!MESSAGE Server returned lastModified <= 0 for https://raw.githubusercontent.com/stoupa91/eclipse-xpath-evaluation-plugin/master/eclipse-xpath-evaluation-plugin-update-site/content.jar
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2023-10-19 11:31:01.242
+!MESSAGE Server returned lastModified <= 0 for https://raw.githubusercontent.com/stoupa91/eclipse-xpath-evaluation-plugin/master/eclipse-xpath-evaluation-plugin-update-site/artifacts.jar
+
+!ENTRY org.eclipse.equinox.p2.artifact.repository 2 0 2023-10-19 11:31:08.349
+!MESSAGE No digest algorithm is available to verify download of org.eclipse.update.feature,eu.musoft.eclipse.xpath.evaluation.plugin,1.4.5.201712270004.
+
+!ENTRY org.eclipse.equinox.p2.artifact.repository 2 0 2023-10-19 11:31:08.350
+!MESSAGE No digest algorithm is available to verify download of osgi.bundle,eu.musoft.eclipse.xpath.evaluation.plugin,1.4.5.201712270004.
+
+!ENTRY org.eclipse.core.jobs 4 2 2023-10-19 11:33:34.103
+!MESSAGE An internal error occurred during: "Install download7".
+!STACK 0
+java.lang.IllegalStateException: Attempt to access stopped agent: org.eclipse.equinox.internal.p2.core.ProvisioningAgent@28d88f05
+	at org.eclipse.equinox.internal.p2.core.ProvisioningAgent.checkRunning(ProvisioningAgent.java:86)
+	at org.eclipse.equinox.internal.p2.core.ProvisioningAgent.getService(ProvisioningAgent.java:50)
+	at org.eclipse.equinox.p2.core.IProvisioningAgent.getService(IProvisioningAgent.java:86)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transfer(MirrorRequest.java:239)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.perform(MirrorRequest.java:162)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getArtifact(SimpleArtifactRepository.java:775)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.DownloadJob.run(DownloadJob.java:64)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.core.jobs 4 2 2023-10-19 11:33:34.304
+!MESSAGE An internal error occurred during: "Install download2".
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "org.eclipse.osgi.signedcontent.SignedContentFactory.getSignedContent(java.io.File)" because "verifierFactory" is null
+	at org.eclipse.equinox.internal.p2.artifact.repository.SignatureVerifier.verifyContent(SignatureVerifier.java:84)
+	at org.eclipse.equinox.internal.p2.artifact.repository.SignatureVerifier.verify(SignatureVerifier.java:66)
+	at org.eclipse.equinox.internal.p2.artifact.repository.SignatureVerifier.close(SignatureVerifier.java:115)
+	at org.eclipse.equinox.internal.provisional.p2.artifact.repository.processing.ProcessingStep.close(ProcessingStep.java:93)
+	at org.eclipse.equinox.internal.p2.artifact.processors.checksum.MessageDigestProcessingStep.close(MessageDigestProcessingStep.java:58)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.reportStatus(SimpleArtifactRepository.java:1260)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.downloadArtifact(SimpleArtifactRepository.java:657)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getArtifact(SimpleArtifactRepository.java:793)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.getArtifact(MirrorRequest.java:329)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transferSingle(MirrorRequest.java:299)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transfer(MirrorRequest.java:232)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.perform(MirrorRequest.java:162)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getArtifact(SimpleArtifactRepository.java:775)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.DownloadJob.run(DownloadJob.java:64)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.core.jobs 4 2 2023-10-19 11:33:34.469
+!MESSAGE An internal error occurred during: "Install download4".
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "org.eclipse.osgi.signedcontent.SignedContentFactory.getSignedContent(java.io.File)" because "verifierFactory" is null
+	at org.eclipse.equinox.internal.p2.artifact.repository.SignatureVerifier.verifyContent(SignatureVerifier.java:84)
+	at org.eclipse.equinox.internal.p2.artifact.repository.SignatureVerifier.verify(SignatureVerifier.java:66)
+	at org.eclipse.equinox.internal.p2.artifact.repository.SignatureVerifier.close(SignatureVerifier.java:115)
+	at org.eclipse.equinox.internal.provisional.p2.artifact.repository.processing.ProcessingStep.close(ProcessingStep.java:93)
+	at org.eclipse.equinox.internal.p2.artifact.processors.checksum.MessageDigestProcessingStep.close(MessageDigestProcessingStep.java:58)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.reportStatus(SimpleArtifactRepository.java:1260)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.downloadArtifact(SimpleArtifactRepository.java:657)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getArtifact(SimpleArtifactRepository.java:793)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.getArtifact(MirrorRequest.java:329)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transferSingle(MirrorRequest.java:299)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transfer(MirrorRequest.java:232)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.perform(MirrorRequest.java:162)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getArtifact(SimpleArtifactRepository.java:775)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.DownloadJob.run(DownloadJob.java:64)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.core.jobs 4 2 2023-10-19 11:33:34.999
+!MESSAGE An internal error occurred during: "Install download1".
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "org.eclipse.osgi.signedcontent.SignedContentFactory.getSignedContent(java.io.File)" because "verifierFactory" is null
+	at org.eclipse.equinox.internal.p2.artifact.repository.SignatureVerifier.verifyContent(SignatureVerifier.java:84)
+	at org.eclipse.equinox.internal.p2.artifact.repository.SignatureVerifier.verify(SignatureVerifier.java:66)
+	at org.eclipse.equinox.internal.p2.artifact.repository.SignatureVerifier.close(SignatureVerifier.java:115)
+	at org.eclipse.equinox.internal.provisional.p2.artifact.repository.processing.ProcessingStep.close(ProcessingStep.java:93)
+	at org.eclipse.equinox.internal.p2.artifact.processors.checksum.MessageDigestProcessingStep.close(MessageDigestProcessingStep.java:58)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.reportStatus(SimpleArtifactRepository.java:1260)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.downloadArtifact(SimpleArtifactRepository.java:657)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getArtifact(SimpleArtifactRepository.java:793)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.getArtifact(MirrorRequest.java:329)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transferSingle(MirrorRequest.java:299)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transfer(MirrorRequest.java:232)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.perform(MirrorRequest.java:162)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getArtifact(SimpleArtifactRepository.java:775)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.DownloadJob.run(DownloadJob.java:64)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.core.jobs 4 2 2023-10-19 11:33:35.010
+!MESSAGE An internal error occurred during: "Install download0".
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "org.eclipse.osgi.signedcontent.SignedContentFactory.getSignedContent(java.io.File)" because "verifierFactory" is null
+	at org.eclipse.equinox.internal.p2.artifact.repository.SignatureVerifier.verifyContent(SignatureVerifier.java:84)
+	at org.eclipse.equinox.internal.p2.artifact.repository.SignatureVerifier.verify(SignatureVerifier.java:66)
+	at org.eclipse.equinox.internal.p2.artifact.repository.SignatureVerifier.close(SignatureVerifier.java:115)
+	at org.eclipse.equinox.internal.provisional.p2.artifact.repository.processing.ProcessingStep.close(ProcessingStep.java:93)
+	at org.eclipse.equinox.internal.p2.artifact.processors.checksum.MessageDigestProcessingStep.close(MessageDigestProcessingStep.java:58)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.reportStatus(SimpleArtifactRepository.java:1260)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.downloadArtifact(SimpleArtifactRepository.java:657)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getArtifact(SimpleArtifactRepository.java:793)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.getArtifact(MirrorRequest.java:329)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transferSingle(MirrorRequest.java:299)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transfer(MirrorRequest.java:232)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.perform(MirrorRequest.java:162)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getArtifact(SimpleArtifactRepository.java:775)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.DownloadJob.run(DownloadJob.java:64)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.equinox.p2.engine 4 4 2023-10-19 11:33:35.011
+!MESSAGE An error occurred while collecting items to be installed
+!SUBENTRY 1 org.eclipse.equinox.p2.engine 4 0 2023-10-19 11:33:35.011
+!MESSAGE session context was:(profile=C__Users_asus_eclipse_java-2023-09_eclipse, phase=org.eclipse.equinox.internal.p2.engine.phases.Collect, operand=, action=).
+!SUBENTRY 1 org.eclipse.equinox.p2.engine 4 0 2023-10-19 11:33:35.011
+!MESSAGE Attempt to access stopped agent: org.eclipse.equinox.internal.p2.core.ProvisioningAgent@28d88f05
+!STACK 0
+java.lang.IllegalStateException: Attempt to access stopped agent: org.eclipse.equinox.internal.p2.core.ProvisioningAgent@28d88f05
+	at org.eclipse.equinox.internal.p2.core.ProvisioningAgent.checkRunning(ProvisioningAgent.java:86)
+	at org.eclipse.equinox.internal.p2.core.ProvisioningAgent.getService(ProvisioningAgent.java:50)
+	at org.eclipse.equinox.p2.core.IProvisioningAgent.getService(IProvisioningAgent.java:86)
+	at org.eclipse.equinox.internal.p2.engine.DownloadManager.publishDownloadEvent(DownloadManager.java:137)
+	at org.eclipse.equinox.internal.p2.engine.DownloadManager.fetch(DownloadManager.java:128)
+	at org.eclipse.equinox.internal.p2.engine.DownloadManager.start(DownloadManager.java:98)
+	at org.eclipse.equinox.internal.p2.engine.phases.Collect.completePhase(Collect.java:124)
+	at org.eclipse.equinox.internal.p2.engine.Phase.postPerform(Phase.java:254)
+	at org.eclipse.equinox.internal.p2.engine.Phase.perform(Phase.java:105)
+	at org.eclipse.equinox.internal.p2.engine.PhaseSet.perform(PhaseSet.java:50)
+	at org.eclipse.equinox.internal.p2.engine.Engine.perform(Engine.java:95)
+	at org.eclipse.equinox.internal.p2.engine.Engine.perform(Engine.java:49)
+	at org.eclipse.equinox.p2.operations.ProvisioningSession.performProvisioningPlan(ProvisioningSession.java:181)
+	at org.eclipse.equinox.p2.operations.ProfileModificationJob.runModal(ProfileModificationJob.java:76)
+	at org.eclipse.equinox.p2.operations.ProvisioningJob.run(ProvisioningJob.java:188)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SESSION 2023-10-19 11:33:36.895 -----------------------------------------------
+eclipse.buildId=4.29.0.20230907-1200
+java.version=17.0.8.1
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=fr_FR
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY ch.qos.logback.classic 1 0 2023-10-19 11:33:57.810
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY ch.qos.logback.classic 1 0 2023-10-19 11:34:02.416
+!MESSAGE Logback config file: C:\Users\asus\Desktop\lsi3\SOA\.metadata\.plugins\org.eclipse.m2e.logback\logback.2.2.0.20230625-0847.xml
+
+!ENTRY org.eclipse.jface 2 0 2023-10-19 11:34:04.529
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2023-10-19 11:34:04.529
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.jdt.ui.navigate.open.type"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.lsp4e.symbolinworkspace"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2023-10-19 11:34:08.598
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\asus'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2023-10-19 11:34:17.808
+!MESSAGE Server returned lastModified <= 0 for https://raw.githubusercontent.com/stoupa91/eclipse-xpath-evaluation-plugin/master/eclipse-xpath-evaluation-plugin-update-site/artifacts.jar
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2023-10-19 11:34:17.939
+!MESSAGE Server returned lastModified <= 0 for https://raw.githubusercontent.com/stoupa91/eclipse-xpath-evaluation-plugin/master/eclipse-xpath-evaluation-plugin-update-site/content.jar
+!SESSION 2023-10-19 11:36:57.119 -----------------------------------------------
+eclipse.buildId=4.29.0.20230907-1200
+java.version=17.0.8.1
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=fr_FR
+Framework arguments:  -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product -data file:/C:/Users/asus/Desktop/lsi3/SOA/ -product org.eclipse.epp.package.java.product
+
+!ENTRY ch.qos.logback.classic 1 0 2023-10-19 11:37:00.191
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY ch.qos.logback.classic 1 0 2023-10-19 11:37:02.218
+!MESSAGE Logback config file: C:\Users\asus\Desktop\lsi3\SOA\.metadata\.plugins\org.eclipse.m2e.logback\logback.2.2.0.20230625-0847.xml
+
+!ENTRY org.eclipse.jface 2 0 2023-10-19 11:37:03.860
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2023-10-19 11:37:03.860
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.jdt.ui.navigate.open.type"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.lsp4e.symbolinworkspace"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2023-10-19 11:37:07.264
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\asus'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2023-10-19 11:37:26.797
+!MESSAGE Server returned lastModified <= 0 for https://raw.githubusercontent.com/stoupa91/eclipse-xpath-evaluation-plugin/master/eclipse-xpath-evaluation-plugin-update-site/artifacts.jar
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2023-10-19 11:37:27.024
+!MESSAGE Server returned lastModified <= 0 for https://raw.githubusercontent.com/stoupa91/eclipse-xpath-evaluation-plugin/master/eclipse-xpath-evaluation-plugin-update-site/content.jar
+
+!ENTRY eu.musoft.eclipse.xpath.evaluation.plugin 1 0 2023-10-19 11:49:39.770
+!MESSAGE Getting XSLT runtime
+
+!ENTRY eu.musoft.eclipse.xpath.evaluation.plugin 1 0 2023-10-19 11:49:39.913
+!MESSAGE Evaluating XPath: //Film/@type
+
+!ENTRY eu.musoft.eclipse.xpath.evaluation.plugin 1 0 2023-10-19 11:49:39.914
+!MESSAGE Against XML with length: 750
+
+!ENTRY eu.musoft.eclipse.xpath.evaluation.plugin 1 0 2023-10-19 11:49:39.914
+!MESSAGE Pretty print:true
+
+!ENTRY eu.musoft.eclipse.xpath.evaluation.plugin 1 0 2023-10-19 11:49:39.914
+!MESSAGE Getting XPath executable
+
+!ENTRY eu.musoft.eclipse.xpath.evaluation.plugin 1 0 2023-10-19 11:49:39.924
+!MESSAGE Building Xdm
+
+!ENTRY eu.musoft.eclipse.xpath.evaluation.plugin 1 0 2023-10-19 11:49:39.934
+!MESSAGE Evaluating XPath
+
+!ENTRY eu.musoft.eclipse.xpath.evaluation.plugin 1 0 2023-10-19 11:49:39.951
+!MESSAGE Transforming result
+
+!ENTRY eu.musoft.eclipse.xpath.evaluation.plugin 1 0 2023-10-19 11:49:39.952
+!MESSAGE Result atomic value: false
+
+!ENTRY eu.musoft.eclipse.xpath.evaluation.plugin 1 0 2023-10-19 11:49:39.952
+!MESSAGE Pretty printing
+!SESSION 2023-10-22 20:06:04.257 -----------------------------------------------
+eclipse.buildId=4.29.0.20230907-1200
+java.version=17.0.8.1
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=fr_FR
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY ch.qos.logback.classic 1 0 2023-10-22 20:06:05.807
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY ch.qos.logback.classic 1 0 2023-10-22 20:06:13.847
+!MESSAGE Logback config file: C:\Users\asus\Desktop\lsi3\SOA\.metadata\.plugins\org.eclipse.m2e.logback\logback.2.2.0.20230625-0847.xml
+
+!ENTRY org.eclipse.jface 2 0 2023-10-22 20:06:15.239
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2023-10-22 20:06:15.240
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.jdt.ui.navigate.open.type"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.lsp4e.symbolinworkspace"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2023-10-22 20:06:19.370
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\asus'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY eu.musoft.eclipse.xpath.evaluation.plugin 1 0 2023-10-22 20:08:26.093
+!MESSAGE Getting XSLT runtime
+
+!ENTRY eu.musoft.eclipse.xpath.evaluation.plugin 1 0 2023-10-22 20:08:26.274
+!MESSAGE Evaluating XPath: //titre
+
+!ENTRY eu.musoft.eclipse.xpath.evaluation.plugin 1 0 2023-10-22 20:08:26.275
+!MESSAGE Against XML with length: 750
+
+!ENTRY eu.musoft.eclipse.xpath.evaluation.plugin 1 0 2023-10-22 20:08:26.275
+!MESSAGE Pretty print:true
+
+!ENTRY eu.musoft.eclipse.xpath.evaluation.plugin 1 0 2023-10-22 20:08:26.276
+!MESSAGE Getting XPath executable
+
+!ENTRY eu.musoft.eclipse.xpath.evaluation.plugin 1 0 2023-10-22 20:08:26.288
+!MESSAGE Building Xdm
+
+!ENTRY eu.musoft.eclipse.xpath.evaluation.plugin 1 0 2023-10-22 20:08:26.300
+!MESSAGE Evaluating XPath
+
+!ENTRY eu.musoft.eclipse.xpath.evaluation.plugin 1 0 2023-10-22 20:08:26.311
+!MESSAGE Transforming result
+
+!ENTRY eu.musoft.eclipse.xpath.evaluation.plugin 1 0 2023-10-22 20:08:26.312
+!MESSAGE Result atomic value: false
+
+!ENTRY eu.musoft.eclipse.xpath.evaluation.plugin 1 0 2023-10-22 20:08:26.313
+!MESSAGE Pretty printing
+
+!ENTRY eu.musoft.eclipse.xpath.evaluation.plugin 1 0 2023-10-22 20:10:44.806
+!MESSAGE Evaluating XPath: //Film [role/acteur='Michel Blanc']/titre
+
+!ENTRY eu.musoft.eclipse.xpath.evaluation.plugin 1 0 2023-10-22 20:10:44.806
+!MESSAGE Against XML with length: 750
+
+!ENTRY eu.musoft.eclipse.xpath.evaluation.plugin 1 0 2023-10-22 20:10:44.808
+!MESSAGE Pretty print:true
+
+!ENTRY eu.musoft.eclipse.xpath.evaluation.plugin 1 0 2023-10-22 20:10:44.808
+!MESSAGE Getting XPath executable
+
+!ENTRY eu.musoft.eclipse.xpath.evaluation.plugin 1 0 2023-10-22 20:10:44.818
+!MESSAGE Building Xdm
+
+!ENTRY eu.musoft.eclipse.xpath.evaluation.plugin 1 0 2023-10-22 20:10:44.819
+!MESSAGE Evaluating XPath
+
+!ENTRY eu.musoft.eclipse.xpath.evaluation.plugin 1 0 2023-10-22 20:10:44.825
+!MESSAGE Transforming result
+
+!ENTRY eu.musoft.eclipse.xpath.evaluation.plugin 1 0 2023-10-22 20:10:44.825
+!MESSAGE Result atomic value: false
+
+!ENTRY eu.musoft.eclipse.xpath.evaluation.plugin 1 0 2023-10-22 20:10:44.826
+!MESSAGE Pretty printing
+
+!ENTRY eu.musoft.eclipse.xpath.evaluation.plugin 1 0 2023-10-22 20:11:33.375
+!MESSAGE Evaluating XPath: //Film [role/acteur='Michel Blanc']/titre
+
+!ENTRY eu.musoft.eclipse.xpath.evaluation.plugin 1 0 2023-10-22 20:11:33.375
+!MESSAGE Against XML with length: 835
+
+!ENTRY eu.musoft.eclipse.xpath.evaluation.plugin 1 0 2023-10-22 20:11:33.376
+!MESSAGE Pretty print:true
+
+!ENTRY eu.musoft.eclipse.xpath.evaluation.plugin 1 0 2023-10-22 20:11:33.376
+!MESSAGE Getting XPath executable
+
+!ENTRY eu.musoft.eclipse.xpath.evaluation.plugin 1 0 2023-10-22 20:11:33.378
+!MESSAGE Building Xdm
+
+!ENTRY eu.musoft.eclipse.xpath.evaluation.plugin 1 0 2023-10-22 20:11:33.379
+!MESSAGE Evaluating XPath
+
+!ENTRY eu.musoft.eclipse.xpath.evaluation.plugin 1 0 2023-10-22 20:11:33.380
+!MESSAGE Transforming result
+
+!ENTRY eu.musoft.eclipse.xpath.evaluation.plugin 1 0 2023-10-22 20:11:33.380
+!MESSAGE Result atomic value: false
+
+!ENTRY eu.musoft.eclipse.xpath.evaluation.plugin 1 0 2023-10-22 20:11:33.380
+!MESSAGE Pretty printing
+
+!ENTRY eu.musoft.eclipse.xpath.evaluation.plugin 1 0 2023-10-22 20:12:01.849
+!MESSAGE Evaluating XPath: ::TITRE
+
+!ENTRY eu.musoft.eclipse.xpath.evaluation.plugin 1 0 2023-10-22 20:12:01.849
+!MESSAGE Against XML with length: 835
+
+!ENTRY eu.musoft.eclipse.xpath.evaluation.plugin 1 0 2023-10-22 20:12:01.849
+!MESSAGE Pretty print:true
+
+!ENTRY eu.musoft.eclipse.xpath.evaluation.plugin 1 0 2023-10-22 20:12:01.850
+!MESSAGE Getting XPath executable
+
+!ENTRY eu.musoft.eclipse.xpath.evaluation.plugin 1 0 2023-10-22 20:12:05.549
+!MESSAGE Evaluating XPath: //titre
+
+!ENTRY eu.musoft.eclipse.xpath.evaluation.plugin 1 0 2023-10-22 20:12:05.550
+!MESSAGE Against XML with length: 835
+
+!ENTRY eu.musoft.eclipse.xpath.evaluation.plugin 1 0 2023-10-22 20:12:05.550
+!MESSAGE Pretty print:true
+
+!ENTRY eu.musoft.eclipse.xpath.evaluation.plugin 1 0 2023-10-22 20:12:05.550
+!MESSAGE Getting XPath executable
+
+!ENTRY eu.musoft.eclipse.xpath.evaluation.plugin 1 0 2023-10-22 20:12:05.552
+!MESSAGE Building Xdm
+
+!ENTRY eu.musoft.eclipse.xpath.evaluation.plugin 1 0 2023-10-22 20:12:05.553
+!MESSAGE Evaluating XPath
+
+!ENTRY eu.musoft.eclipse.xpath.evaluation.plugin 1 0 2023-10-22 20:12:05.553
+!MESSAGE Transforming result
+
+!ENTRY eu.musoft.eclipse.xpath.evaluation.plugin 1 0 2023-10-22 20:12:05.553
+!MESSAGE Result atomic value: false
+
+!ENTRY eu.musoft.eclipse.xpath.evaluation.plugin 1 0 2023-10-22 20:12:05.554
+!MESSAGE Pretty printing
+
+!ENTRY eu.musoft.eclipse.xpath.evaluation.plugin 1 0 2023-10-22 20:12:07.888
+!MESSAGE Evaluating XPath: //titre
+
+!ENTRY eu.musoft.eclipse.xpath.evaluation.plugin 1 0 2023-10-22 20:12:07.888
+!MESSAGE Against XML with length: 835
+
+!ENTRY eu.musoft.eclipse.xpath.evaluation.plugin 1 0 2023-10-22 20:12:07.889
+!MESSAGE Pretty print:true
+
+!ENTRY eu.musoft.eclipse.xpath.evaluation.plugin 1 0 2023-10-22 20:12:07.889
+!MESSAGE Getting XPath executable
+
+!ENTRY eu.musoft.eclipse.xpath.evaluation.plugin 1 0 2023-10-22 20:12:07.889
+!MESSAGE Building Xdm
+
+!ENTRY eu.musoft.eclipse.xpath.evaluation.plugin 1 0 2023-10-22 20:12:07.891
+!MESSAGE Evaluating XPath
+
+!ENTRY eu.musoft.eclipse.xpath.evaluation.plugin 1 0 2023-10-22 20:12:07.891
+!MESSAGE Transforming result
+
+!ENTRY eu.musoft.eclipse.xpath.evaluation.plugin 1 0 2023-10-22 20:12:07.891
+!MESSAGE Result atomic value: false
+
+!ENTRY eu.musoft.eclipse.xpath.evaluation.plugin 1 0 2023-10-22 20:12:07.892
+!MESSAGE Pretty printing
+
+!ENTRY eu.musoft.eclipse.xpath.evaluation.plugin 1 0 2023-10-22 20:13:04.849
+!MESSAGE Evaluating XPath: //Film [role/acteur='Michel Blanc']/titre
+
+!ENTRY eu.musoft.eclipse.xpath.evaluation.plugin 1 0 2023-10-22 20:13:04.850
+!MESSAGE Against XML with length: 835
+
+!ENTRY eu.musoft.eclipse.xpath.evaluation.plugin 1 0 2023-10-22 20:13:04.850
+!MESSAGE Pretty print:true
+
+!ENTRY eu.musoft.eclipse.xpath.evaluation.plugin 1 0 2023-10-22 20:13:04.851
+!MESSAGE Getting XPath executable
+
+!ENTRY eu.musoft.eclipse.xpath.evaluation.plugin 1 0 2023-10-22 20:13:04.852
+!MESSAGE Building Xdm
+
+!ENTRY eu.musoft.eclipse.xpath.evaluation.plugin 1 0 2023-10-22 20:13:04.853
+!MESSAGE Evaluating XPath
+
+!ENTRY eu.musoft.eclipse.xpath.evaluation.plugin 1 0 2023-10-22 20:13:04.853
+!MESSAGE Transforming result
+
+!ENTRY eu.musoft.eclipse.xpath.evaluation.plugin 1 0 2023-10-22 20:13:04.855
+!MESSAGE Result atomic value: false
+
+!ENTRY eu.musoft.eclipse.xpath.evaluation.plugin 1 0 2023-10-22 20:13:04.855
+!MESSAGE Pretty printing
+
+!ENTRY eu.musoft.eclipse.xpath.evaluation.plugin 1 0 2023-10-22 20:13:46.350
+!MESSAGE Evaluating XPath: distinct-values(//Film/@type)
+
+!ENTRY eu.musoft.eclipse.xpath.evaluation.plugin 1 0 2023-10-22 20:13:46.352
+!MESSAGE Against XML with length: 835
+
+!ENTRY eu.musoft.eclipse.xpath.evaluation.plugin 1 0 2023-10-22 20:13:46.352
+!MESSAGE Pretty print:true
+
+!ENTRY eu.musoft.eclipse.xpath.evaluation.plugin 1 0 2023-10-22 20:13:46.352
+!MESSAGE Getting XPath executable
+
+!ENTRY eu.musoft.eclipse.xpath.evaluation.plugin 1 0 2023-10-22 20:13:46.354
+!MESSAGE Building Xdm
+
+!ENTRY eu.musoft.eclipse.xpath.evaluation.plugin 1 0 2023-10-22 20:13:46.356
+!MESSAGE Evaluating XPath
+
+!ENTRY eu.musoft.eclipse.xpath.evaluation.plugin 1 0 2023-10-22 20:13:46.359
+!MESSAGE Transforming result
+
+!ENTRY eu.musoft.eclipse.xpath.evaluation.plugin 1 0 2023-10-22 20:13:46.360
+!MESSAGE Result atomic value: true
+
+!ENTRY eu.musoft.eclipse.xpath.evaluation.plugin 1 0 2023-10-22 20:14:22.487
+!MESSAGE Evaluating XPath: //role[acteur = "Michel Blanc']/nom
+
+!ENTRY eu.musoft.eclipse.xpath.evaluation.plugin 1 0 2023-10-22 20:14:22.489
+!MESSAGE Against XML with length: 835
+
+!ENTRY eu.musoft.eclipse.xpath.evaluation.plugin 1 0 2023-10-22 20:14:22.489
+!MESSAGE Pretty print:true
+
+!ENTRY eu.musoft.eclipse.xpath.evaluation.plugin 1 0 2023-10-22 20:14:22.490
+!MESSAGE Getting XPath executable
+
+!ENTRY eu.musoft.eclipse.xpath.evaluation.plugin 1 0 2023-10-22 20:15:15.667
+!MESSAGE Evaluating XPath: //role[acteur = "Michel Blanc']/nom
+
+!ENTRY eu.musoft.eclipse.xpath.evaluation.plugin 1 0 2023-10-22 20:15:15.667
+!MESSAGE Against XML with length: 835
+
+!ENTRY eu.musoft.eclipse.xpath.evaluation.plugin 1 0 2023-10-22 20:15:15.667
+!MESSAGE Pretty print:true
+
+!ENTRY eu.musoft.eclipse.xpath.evaluation.plugin 1 0 2023-10-22 20:15:15.668
+!MESSAGE Getting XPath executable
+
+!ENTRY eu.musoft.eclipse.xpath.evaluation.plugin 1 0 2023-10-22 20:15:39.207
+!MESSAGE Evaluating XPath: //role[acteur = "Michel Blanc']/nom
+
+!ENTRY eu.musoft.eclipse.xpath.evaluation.plugin 1 0 2023-10-22 20:15:39.208
+!MESSAGE Against XML with length: 835
+
+!ENTRY eu.musoft.eclipse.xpath.evaluation.plugin 1 0 2023-10-22 20:15:39.209
+!MESSAGE Pretty print:true
+
+!ENTRY eu.musoft.eclipse.xpath.evaluation.plugin 1 0 2023-10-22 20:15:39.209
+!MESSAGE Getting XPath executable
+
+!ENTRY eu.musoft.eclipse.xpath.evaluation.plugin 1 0 2023-10-22 20:16:46.936
+!MESSAGE Evaluating XPath: //role[acteur = "Michel Blanc']/nom
+
+!ENTRY eu.musoft.eclipse.xpath.evaluation.plugin 1 0 2023-10-22 20:16:46.937
+!MESSAGE Against XML with length: 846
+
+!ENTRY eu.musoft.eclipse.xpath.evaluation.plugin 1 0 2023-10-22 20:16:46.937
+!MESSAGE Pretty print:true
+
+!ENTRY eu.musoft.eclipse.xpath.evaluation.plugin 1 0 2023-10-22 20:16:46.937
+!MESSAGE Getting XPath executable
+
+!ENTRY eu.musoft.eclipse.xpath.evaluation.plugin 1 0 2023-10-22 20:17:32.523
+!MESSAGE Evaluating XPath: //role[acteur= "Michel Blanc']/nom
+
+!ENTRY eu.musoft.eclipse.xpath.evaluation.plugin 1 0 2023-10-22 20:17:32.524
+!MESSAGE Against XML with length: 846
+
+!ENTRY eu.musoft.eclipse.xpath.evaluation.plugin 1 0 2023-10-22 20:17:32.524
+!MESSAGE Pretty print:true
+
+!ENTRY eu.musoft.eclipse.xpath.evaluation.plugin 1 0 2023-10-22 20:17:32.524
+!MESSAGE Getting XPath executable
+
+!ENTRY eu.musoft.eclipse.xpath.evaluation.plugin 1 0 2023-10-22 20:17:46.436
+!MESSAGE Evaluating XPath: //role[acteur="Michel Blanc']/nom
+
+!ENTRY eu.musoft.eclipse.xpath.evaluation.plugin 1 0 2023-10-22 20:17:46.436
+!MESSAGE Against XML with length: 835
+
+!ENTRY eu.musoft.eclipse.xpath.evaluation.plugin 1 0 2023-10-22 20:17:46.437
+!MESSAGE Pretty print:true
+
+!ENTRY eu.musoft.eclipse.xpath.evaluation.plugin 1 0 2023-10-22 20:17:46.437
+!MESSAGE Getting XPath executable
+
+!ENTRY eu.musoft.eclipse.xpath.evaluation.plugin 1 0 2023-10-22 20:19:57.194
+!MESSAGE Evaluating XPath: //role[acteur='Michel Blanc']/nom
+
+!ENTRY eu.musoft.eclipse.xpath.evaluation.plugin 1 0 2023-10-22 20:19:57.195
+!MESSAGE Against XML with length: 835
+
+!ENTRY eu.musoft.eclipse.xpath.evaluation.plugin 1 0 2023-10-22 20:19:57.195
+!MESSAGE Pretty print:true
+
+!ENTRY eu.musoft.eclipse.xpath.evaluation.plugin 1 0 2023-10-22 20:19:57.196
+!MESSAGE Getting XPath executable
+
+!ENTRY eu.musoft.eclipse.xpath.evaluation.plugin 1 0 2023-10-22 20:19:57.197
+!MESSAGE Building Xdm
+
+!ENTRY eu.musoft.eclipse.xpath.evaluation.plugin 1 0 2023-10-22 20:19:57.197
+!MESSAGE Evaluating XPath
+
+!ENTRY eu.musoft.eclipse.xpath.evaluation.plugin 1 0 2023-10-22 20:19:57.198
+!MESSAGE Transforming result
+
+!ENTRY eu.musoft.eclipse.xpath.evaluation.plugin 1 0 2023-10-22 20:19:57.199
+!MESSAGE Result atomic value: false
+
+!ENTRY eu.musoft.eclipse.xpath.evaluation.plugin 1 0 2023-10-22 20:19:57.199
+!MESSAGE Pretty printing
+
+!ENTRY eu.musoft.eclipse.xpath.evaluation.plugin 1 0 2023-10-22 20:20:08.831
+!MESSAGE Evaluating XPath: //role[acteur='Michel Blanc']/nom
+
+!ENTRY eu.musoft.eclipse.xpath.evaluation.plugin 1 0 2023-10-22 20:20:08.832
+!MESSAGE Against XML with length: 835
+
+!ENTRY eu.musoft.eclipse.xpath.evaluation.plugin 1 0 2023-10-22 20:20:08.832
+!MESSAGE Pretty print:true
+
+!ENTRY eu.musoft.eclipse.xpath.evaluation.plugin 1 0 2023-10-22 20:20:08.832
+!MESSAGE Getting XPath executable
+
+!ENTRY eu.musoft.eclipse.xpath.evaluation.plugin 1 0 2023-10-22 20:20:08.832
+!MESSAGE Building Xdm
+
+!ENTRY eu.musoft.eclipse.xpath.evaluation.plugin 1 0 2023-10-22 20:20:08.833
+!MESSAGE Evaluating XPath
+
+!ENTRY eu.musoft.eclipse.xpath.evaluation.plugin 1 0 2023-10-22 20:20:08.834
+!MESSAGE Transforming result
+
+!ENTRY eu.musoft.eclipse.xpath.evaluation.plugin 1 0 2023-10-22 20:20:08.835
+!MESSAGE Result atomic value: false
+
+!ENTRY eu.musoft.eclipse.xpath.evaluation.plugin 1 0 2023-10-22 20:20:08.835
+!MESSAGE Pretty printing
+
+!ENTRY eu.musoft.eclipse.xpath.evaluation.plugin 1 0 2023-10-22 20:21:22.799
+!MESSAGE Evaluating XPath: //role[1]/acteur 
+
+!ENTRY eu.musoft.eclipse.xpath.evaluation.plugin 1 0 2023-10-22 20:21:22.800
+!MESSAGE Against XML with length: 835
+
+!ENTRY eu.musoft.eclipse.xpath.evaluation.plugin 1 0 2023-10-22 20:21:22.800
+!MESSAGE Pretty print:true
+
+!ENTRY eu.musoft.eclipse.xpath.evaluation.plugin 1 0 2023-10-22 20:21:22.800
+!MESSAGE Getting XPath executable
+
+!ENTRY eu.musoft.eclipse.xpath.evaluation.plugin 1 0 2023-10-22 20:21:22.802
+!MESSAGE Building Xdm
+
+!ENTRY eu.musoft.eclipse.xpath.evaluation.plugin 1 0 2023-10-22 20:21:22.803
+!MESSAGE Evaluating XPath
+
+!ENTRY eu.musoft.eclipse.xpath.evaluation.plugin 1 0 2023-10-22 20:21:22.805
+!MESSAGE Transforming result
+
+!ENTRY eu.musoft.eclipse.xpath.evaluation.plugin 1 0 2023-10-22 20:21:22.806
+!MESSAGE Result atomic value: false
+
+!ENTRY eu.musoft.eclipse.xpath.evaluation.plugin 1 0 2023-10-22 20:21:22.806
+!MESSAGE Pretty printing
+!SESSION 2023-10-22 21:34:12.315 -----------------------------------------------
+eclipse.buildId=4.29.0.20230907-1200
+java.version=17.0.8.1
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=fr_FR
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY ch.qos.logback.classic 1 0 2023-10-22 21:34:14.201
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY ch.qos.logback.classic 1 0 2023-10-22 21:34:20.282
+!MESSAGE Logback config file: C:\Users\asus\Desktop\lsi3\SOA\.metadata\.plugins\org.eclipse.m2e.logback\logback.2.2.0.20230625-0847.xml
+
+!ENTRY org.eclipse.jface 2 0 2023-10-22 21:34:21.548
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2023-10-22 21:34:21.548
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.jdt.ui.navigate.open.type"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.lsp4e.symbolinworkspace"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2023-10-22 21:34:25.692
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\asus'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
